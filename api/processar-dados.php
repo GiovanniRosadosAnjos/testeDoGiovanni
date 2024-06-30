@@ -16,7 +16,7 @@ $hora_atual = date('H:i:s');
 
 
 
-$smtp = $conn-> prepare ("INSERT INTO mensagens (nome, email, mensagem, data, hora) VALUES(?,?,?,?,?)");
+$smtp = $conn-> prepare ("INSERT INTO tbl_mensagens (nome, email, mensagem, data, hora) VALUES(?,?,?,?,?)");
 $smtp -> bind_param ("sssss", $nome, $email, $mensagem, $data_atual, $hora_atual);
 
 if ($smtp->execute()){
